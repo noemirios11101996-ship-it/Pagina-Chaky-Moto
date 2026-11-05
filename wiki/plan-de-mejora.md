@@ -79,9 +79,14 @@ Probar en escritorio y celular, navegación, sedes, WhatsApp y cotización; comp
 **Listo cuando:** cada dato y contacto comprobado coincide con lo aprobado y la página funciona en ambas vistas.
 
 ## Pendiente para continuar
-- Direcciones completas, WhatsApp y horario de cada sede.
-- Qué significa vender al por mayor «pero no por cantidades»: criterio de acceso y condiciones.
-- Qué condiciones definen un domicilio según la compra.
+- Dirección completa, WhatsApp y horario de cada una de las tres sedes.
+- Regla para cotizar al por mayor: la página actual aplica automáticamente el precio y el ahorro al llegar a seis unidades. La usuaria confirmó que la venta mayorista sigue, pero no se maneja por cantidades; falta definir qué debe activar ese precio. No cambiar totales ni tarifas hasta aclararlo.
+- Cobertura y condición que determina si una compra recibe domicilio.
+
+## Preguntas para continuar
+1. ¿Cuál es la dirección completa, WhatsApp y horario de La Jagua de Ibirico, Chiriguaná y La Loma, respectivamente?
+2. Si el precio mayorista no depende de cantidad, ¿cómo se determina: por tipo de cliente, cotización individual u otra regla?
+3. ¿En qué zonas hacen domicilios y qué condición de la compra los habilita?
 
 ## Forma de avanzar
-Trabajar un paso a la vez, preservando originales y haciendo cambios pequeños. No marcar un paso como terminado hasta comprobar su criterio. El inventario del punto de partida está revisado; el paso 1 está iniciado con las confirmaciones de la usuaria.
+Trabajar un paso a la vez, preservando originales y haciendo cambios pequeños. No marcar un paso como terminado hasta comprobar su criterio. El inventario del punto de partida está revisado; el paso 1 está iniciado con las confirmaciones de la usuaria. No cambiar la lógica de precio mayorista hasta aclarar el criterio comercial.

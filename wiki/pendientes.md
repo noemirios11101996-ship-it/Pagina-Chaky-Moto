@@ -7,3 +7,4 @@
 - **Material empresarial:** `Docs/` está vacía; falta catálogo, logo/fotos autorizadas y datos para evaluar la política de privacidad.
 - **Ejecución local:** Vite no resuelve `index.html` desde la ruta UNC (el servidor respondió 404). Probar en una ruta local antes de revisión visual.
 - **Publicación visual:** repositorio está en GitHub `main`, pero el estado del despliegue público sigue sin confirmarse.
+- **Comprobación técnica pendiente por regla comercial:** el cotizador y el catálogo aplican precio/ahorro mayorista automáticamente desde seis unidades. La usuaria confirmó que la venta mayorista continúa, pero no por cantidades. Aclarar el criterio que reemplaza el umbral antes de editar precios, cálculos o mensajes.

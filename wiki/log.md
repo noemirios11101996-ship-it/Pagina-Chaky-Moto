@@ -34,3 +34,8 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - La usuaria confirmó tres sedes: La Jagua de Ibirico, Chiriguaná y La Loma, Cesar; la mención antigua de Valledupar queda superada.
 - Confirmó repuestos y lujos para todo tipo de motos, originales y genéricos; mayoristas siguen vigentes y hay domicilios según compra.
 - Actualizados [[empresa]], [[plan-de-mejora]] y [[pendientes]]. Quedan por precisar contactos, horarios y condiciones de mayorista/domicilios.
+
+## [2026-11-05] implementación preparada | Revisión de regla mayorista
+- Revisadas las menciones del umbral de seis unidades: aparece tanto en el contenido como en los cálculos del cotizador y el catálogo.
+- No se modificaron precios ni totales porque falta definir cómo se determina el precio mayorista si no depende de cantidad.
+- Se actualizaron [[plan-de-mejora]], [[pendientes]] y [[decisiones]]; queda pendiente la regla mayorista y la condición de domicilios.
