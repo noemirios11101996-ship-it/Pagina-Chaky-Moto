@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #002565;
+  --color-primary-container: #123b89;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #89a9fe;
+  --color-primary-fixed: #dae2ff;
+  --color-primary-fixed-dim: #b2c5ff;
+  --color-on-primary-fixed: #001847;
+  --color-on-primary-fixed-variant: #1d4290;
+
+  --color-secondary: #a23f00;
+  --color-secondary-container: #ff752a;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #5f2200;
+  --color-secondary-fixed: #ffdbcc;
+  --color-secondary-fixed-dim: #ffb695;
+  --color-on-secondary-fixed: #351000;
+  --color-on-secondary-fixed-variant: #7c2e00;
+
+  --color-tertiary: #192a47;
+  --color-tertiary-container: #30405f;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #9cacd0;
+  --color-tertiary-fixed: #d7e2ff;
+  --color-tertiary-fixed-dim: #b6c7ec;
+  --color-on-tertiary-fixed: #091b38;
+  --color-on-tertiary-fixed-variant: #374766;
+
+  --color-background: #f9f9ff;
+  --color-on-background: #121b2e;
+  --color-surface: #f9f9ff;
+  --color-on-surface: #121b2e;
+  --color-surface-dim: #d1daf4;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-variant: #d9e2fc;
+  --color-on-surface-variant: #444651;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f3ff;
+  --color-surface-container: #e9edff;
+  --color-surface-container-high: #e1e8ff;
+  --color-surface-container-highest: #d9e2fc;
+
+  --color-outline: #747782;
+  --color-outline-variant: #c4c6d3;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-inverse-surface: #273044;
+  --color-inverse-on-surface: #edf0ff;
+  --color-inverse-primary: #b2c5ff;
+  --color-surface-tint: #395baa;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 2rem;
+  --spacing-margin-mobile: 1rem;
+
+  --font-manrope: "Manrope", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Custom Typography & Utility Helpers */
+.font-display-lg {
+  font-family: var(--font-manrope);
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
+}
+@media (max-width: 640px) {
+  .font-display-lg {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.font-headline-xl {
+  font-family: var(--font-manrope);
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  .font-headline-xl {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+.font-headline-lg {
+  font-family: var(--font-manrope);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-family: var(--font-manrope);
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.font-headline-sm {
+  font-family: var(--font-manrope);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-family: var(--font-inter);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.font-body-md {
+  font-family: var(--font-inter);
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.font-body-sm {
+  font-family: var(--font-inter);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.font-label-lg {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.font-label-md {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.font-label-sm {
+  font-family: var(--font-inter);
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 700;
+}
+
+/* Material Symbols styling */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: middle;
+  user-select: none;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f3ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #b2c5ff;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #123b89;
+}

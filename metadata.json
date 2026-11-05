@@ -1,0 +1,6 @@
+{
+  "name": "CHAKY MOTOS - Un Mundo de Servicios",
+  "description": "Distribuidora y almacén de repuestos, accesorios, llantas y lubricantes para motos con sedes en La Jagua de Ibirico, La Loma y Chiriguaná (Cesar, Colombia). Venta al detal y mayor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
