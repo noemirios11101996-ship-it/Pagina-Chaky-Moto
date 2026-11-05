@@ -27,11 +27,9 @@ export interface SedeInfo {
   municipality: string;
   address: string;
   phone: string;
-  altPhone?: string;
   whatsapp: string; // international format without + for wa.me
   whatsappDisplay: string;
   hoursWeek: string;
-  hoursSunday: string;
   isPrincipal: boolean;
   badges: string[];
   manager: string;
@@ -51,12 +49,10 @@ export const SEDES_DATA: Record<string, SedeInfo> = {
     subtitle: 'Almacén central, bodega mayorista y taller de soporte',
     municipality: 'La Jagua de Ibirico, Cesar',
     address: 'Carrera 4 #4-58, Barrio Centro, diagonal a los bomberos',
-    phone: '+57 321 463 3702',
-    altPhone: '+57 323 222 4529',
-    whatsapp: '573214633702',
-    whatsappDisplay: '+57 321 463 3702',
-    hoursWeek: 'Lunes a Sábado: 7:00 a. m. – 6:00 p. m.',
-    hoursSunday: 'Domingos y festivos: 8:00 a. m. – 1:00 p. m.',
+    phone: '+57 311 397 2905',
+    whatsapp: '573113972905',
+    whatsappDisplay: '+57 311 397 2905',
+    hoursWeek: 'Lunes a sábado: 7:00 a. m. – 6:00 p. m.',
     isPrincipal: true,
     badges: ['Sede Principal', 'Mayorista & Detal', 'Taller Especializado', 'Bodega Central'],
     manager: 'Carlos Quintero (Chaky)',
@@ -69,11 +65,10 @@ export const SEDES_DATA: Record<string, SedeInfo> = {
     subtitle: 'Punto estratégico zona minera y corredor carbonífero',
     municipality: 'La Loma, El Paso, Cesar',
     address: 'Calle 10, cra. 16 37, frente a AO',
-    phone: '+57 310 687 0934',
-    whatsapp: '573106870934',
-    whatsappDisplay: '+57 310 687 0934',
-    hoursWeek: 'Lunes a Sábado: 7:00 a. m. – 6:00 p. m.',
-    hoursSunday: 'Domingos: Cerrado',
+    phone: '+57 311 397 2905',
+    whatsapp: '573113972905',
+    whatsappDisplay: '+57 311 397 2905',
+    hoursWeek: 'Lunes a sábado: 7:00 a. m. – 6:00 p. m.',
     isPrincipal: false,
     badges: ['Zona Minera', 'Despacho Exprés', 'Venta Detal'],
     manager: 'Andrés Martínez',
@@ -86,11 +81,10 @@ export const SEDES_DATA: Record<string, SedeInfo> = {
     subtitle: 'Punto de atención centro del Cesar y municipios vecinos',
     municipality: 'Chiriguaná, Cesar',
     address: 'Calle 8 #7-99, Barrio El Carmen',
-    phone: '+57 320 570 8521',
-    whatsapp: '573205708521',
-    whatsappDisplay: '+57 320 570 8521',
-    hoursWeek: 'Lunes a Sábado: 7:30 a. m. – 6:00 p. m.',
-    hoursSunday: 'Domingos: 8:00 a. m. – 12:00 m.',
+    phone: '+57 311 397 2905',
+    whatsapp: '573113972905',
+    whatsappDisplay: '+57 311 397 2905',
+    hoursWeek: 'Lunes a sábado: 7:00 a. m. – 6:00 p. m.',
     isPrincipal: false,
     badges: ['Atención Rápida', 'Surtido Garantizado', 'Crédito Sistecrédito'],
     manager: 'Mayerlis Gómez',

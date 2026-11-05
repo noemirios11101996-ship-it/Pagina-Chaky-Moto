@@ -16,7 +16,7 @@ Tener una página rápida y clara para que las personas encuentren productos o s
 - **Confirmado por la usuaria:** las sedes vigentes son La Jagua de Ibirico, Chiriguaná y La Loma, Cesar. También proporcionó las direcciones; la propuesta antigua de Valledupar queda superada.
 - **Confirmado por la usuaria:** oferta general de repuestos y lujos para todo tipo de motos, incluyendo repuestos originales y genéricos de marcas de alta calidad.
 - **Confirmado por la usuaria:** la venta mayorista sigue y no se determina por valor ni cantidad. Los domicilios dentro del municipio dependen del valor de compra; fuera del municipio son gratis para pedidos mayoristas.
-- **Pendiente:** WhatsApp y horarios de cada sede; nombres de marcas y catálogo detallado; cómo cotizar mayorista sin el umbral automático de seis unidades; cobertura exacta de domicilios gratuitos por fuera del municipio.
+- **Confirmado:** WhatsApp 311 397 2905 y horario de lunes a sábado, 7:00 a. m.–6:00 p. m., para las tres sedes; también las condiciones generales de domicilio. **Pendiente:** nombres de marcas y catálogo detallado; cómo mostrar/cotizar el precio mayorista sin el umbral automático de seis unidades.
 - **Confirmado:** `Docs/` está vacía. No hay catálogo empresarial, logo ni fotos propias autorizadas allí.
 - **Comprobado parcialmente:** TypeScript pasa. Vite no pudo resolver la página desde la ruta de red compartida; falta una ejecución local verificable en escritorio y celular.
 - **Sin cambios al sitio:** las respuestas de negocio se registraron; todavía no cambié la web.
@@ -39,7 +39,7 @@ Resolver el bloqueo de Vite en la ruta UNC usando una copia de trabajo en ruta l
 **Listo cuando:** inicio, rutas principales y recursos cargan; compilación y TypeScript pasan.
 
 ### 3. Corregir sedes y contacto
-Ya se actualizaron las tres direcciones con la información proporcionada. Confirmar horarios y números de WhatsApp antes de publicarlos. Cada botón debe abrir el número correcto.
+Ya se actualizaron las direcciones, el WhatsApp compartido y el horario confirmado de lunes a sábado. Verificar cada botón antes de marcar el paso como terminado.
 
 **Depende de:** pasos 1 y 2.
 
@@ -79,15 +79,12 @@ Probar en escritorio y celular, navegación, sedes, WhatsApp y cotización; comp
 **Listo cuando:** cada dato y contacto comprobado coincide con lo aprobado y la página funciona en ambas vistas.
 
 ## Pendiente para continuar
-- WhatsApp y horario actual de cada una de las tres sedes.
-- Cómo debe mostrar o calcularse el precio mayorista: la usuaria confirmó que no depende de valor ni cantidad, pero el sistema actual activa precios y ahorros desde seis unidades.
-- Cobertura exacta de los domicilios gratis para pedidos mayoristas fuera del municipio. Para domicilios locales, el valor mínimo todavía no está definido.
-- Confirmar la forma escrita de la dirección de La Loma («calle 10 cra 16 37 frente a AO») antes de publicarla si se necesita formato postal normalizado.
+- Definir cómo se debe consultar o mostrar el precio mayorista: la usuaria confirmó que no hay determinación por valor ni cantidad, pero el sistema aún activa precios y ahorros desde seis unidades.
+- Confirmar las marcas y el catálogo detallado al recibir material en `Docs/`.
+- Dentro del municipio, el domicilio depende del valor de compra y aún no hay umbral definido; el texto invita a consultar. Para pedidos mayoristas fuera del municipio, la usuaria confirmó domicilio gratis.
 
-## Preguntas para continuar
-1. ¿Qué WhatsApp y horario vigentes corresponden a cada sede?
-2. ¿Quieres que el precio mayorista se muestre como una tarifa por producto para cualquier cantidad, o que el cliente solicite una cotización al asesor? Así reemplazo correctamente el cálculo automático desde seis unidades.
-3. ¿El domicilio mayorista gratis fuera del municipio aplica a todas las zonas o hay límites de cobertura?
+## Pregunta abierta
+¿El precio mayorista debe mostrarse como una tarifa fija por producto disponible sin mínimo, o el cliente debe pedir cotización al asesor? Esta decisión reemplaza el cálculo actual desde seis unidades.
 
 ## Forma de avanzar
-Trabajar un paso a la vez, preservando originales y haciendo cambios pequeños. No marcar un paso como terminado hasta comprobar su criterio. Las direcciones y la política general de domicilios ya se incorporaron al sitio; teléfonos, horarios y la regla de cotización siguen pendientes.
+Trabajar un paso a la vez y no marcarlo como terminado hasta comprobarlo. Direcciones, WhatsApp compartido, horario y regla general de domicilios ya se actualizaron en el sitio. La lógica del precio mayorista sigue pendiente de esa decisión.

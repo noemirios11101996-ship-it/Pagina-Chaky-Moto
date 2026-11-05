@@ -49,3 +49,9 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - Actualizadas las direcciones de las tres sedes en `src/data/mockData.ts`.
 - Sustituida en la vista de sedes y FAQ la información de envíos no confirmada por la política indicada por la usuaria: domicilio local sujeto al valor de compra; gratis para pedidos mayoristas fuera del municipio.
 - TypeScript pasó. La compilación Vite no terminó en la copia local temporal; no se hizo revisión visual. Los requisitos mayoristas por cantidad aún requieren actualización después de confirmar el flujo de cotización.
+
+## [2026-11-05] contacto confirmado | WhatsApp y horario
+- Actualizados los tres registros de sede al WhatsApp compartido 311 397 2905 y al horario lunes a sábado, 7:00 a. m.–6:00 p. m.
+- Se quitaron horarios de domingo y el número alternativo anterior, que no estaban confirmados.
+- La usuaria indicó que el resto de la política de compra y domicilios está bien. Sigue pendiente cómo sustituir el algoritmo mayorista de seis unidades.
+- `tsc --noEmit` pasó después de actualizar WhatsApp, horario y eliminar horarios de domingo no confirmados. Vite build sigue sin producir `dist`; no se afirma revisión visual.

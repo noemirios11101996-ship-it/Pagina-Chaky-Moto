@@ -11,4 +11,5 @@
 - **Pendiente:** estado visual de publicación/despliegue no identificado; el README conserva instrucciones genéricas de AI Studio.
 - **Siguiente paso:** probar el proyecto desde una ruta local con `npm run dev`/`npm run build`; luego revisar visualmente la página y distinguir datos de demostración de los aprobados por la empresa.
 - **Última actualización de contenido:** se aplicaron en `src/data/mockData.ts` las direcciones de las tres sedes y se actualizó la información de domicilios en `src/views/BranchesView.tsx` y las FAQ. WhatsApp y horarios siguen pendientes.
-- **Comprobación de esta actualización:** TypeScript (`tsc --noEmit`) pasó. La compilación de Vite en una copia local temporal no terminó ni produjo `dist`; desde la ruta UNC ya se había observado un 404. La página no está verificada visualmente.
+- **Comprobación más reciente:** TypeScript (`tsc --noEmit`) pasó con las direcciones, WhatsApp y horarios actualizados. La compilación de Vite en una copia local temporal no terminó ni produjo `dist`; desde la ruta UNC ya se había observado un 404. La página no está verificada visualmente.
+

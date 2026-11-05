@@ -172,7 +172,6 @@ export const BranchesView: React.FC<BranchesViewProps> = ({
                             Horario de atención:
                           </span>
                           <p className="pl-5 text-on-surface">{sede.hoursWeek}</p>
-                          <p className="pl-5 text-outline">{sede.hoursSunday}</p>
                         </div>
 
                         <div className="space-y-1">
@@ -189,9 +188,6 @@ export const BranchesView: React.FC<BranchesViewProps> = ({
                               {copiedId === sede.id ? 'Copiado' : 'Copiar'}
                             </button>
                           </p>
-                          {sede.altPhone && (
-                            <p className="pl-5 text-outline">Alt: {sede.altPhone}</p>
-                          )}
                         </div>
 
                         <div className="space-y-1">
