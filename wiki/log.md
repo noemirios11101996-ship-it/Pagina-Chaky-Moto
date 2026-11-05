@@ -55,3 +55,8 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - Se quitaron horarios de domingo y el número alternativo anterior, que no estaban confirmados.
 - La usuaria indicó que el resto de la política de compra y domicilios está bien. Sigue pendiente cómo sustituir el algoritmo mayorista de seis unidades.
 - `tsc --noEmit` pasó después de actualizar WhatsApp, horario y eliminar horarios de domingo no confirmados. Vite build sigue sin producir `dist`; no se afirma revisión visual.
+
+## [2026-11-05] plan | Pasos iniciales
+- Instaladas y verificadas las cinco skills previstas en `.agents/skills/`; no se ejecutaron sus scripts.
+- Completado el inventario inicial: sitio existente y `Docs/` vacía. El plan original quedó marcado para los pasos 0 y 1.
+- Confirmados en la web direcciones, WhatsApp compartido y horario; la comprobación de botones queda pendiente de una ejecución local fiable.

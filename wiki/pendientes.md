@@ -4,6 +4,6 @@
 - **Catálogo y marcas:** falta material detallado aprobado; `Docs/` sigue vacía.
 - **Domicilios:** dentro del municipio dependen del valor de compra (umbral no definido); pedidos mayoristas fuera del municipio con domicilio gratis.
 - **Ejecución local:** TypeScript pasó después de actualizar contactos; la compilación Vite no terminó en la ruta local temporal y desde UNC no resuelve `index.html`. Falta revisar el sitio visualmente.
-- **Verificación de contacto:** actualizar enlaces a WhatsApp y horario para las tres sedes; aún falta probarlos visualmente.
+- **Verificación de contacto:** datos y enlaces se actualizaron para las tres sedes; falta probar los botones con la página en ejecución.
 - **Publicación visual:** repositorio está en GitHub `main`, pero el estado del despliegue público sigue sin confirmarse.
 

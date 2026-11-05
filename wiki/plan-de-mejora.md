@@ -19,16 +19,19 @@ Tener una página rápida y clara para que las personas encuentren productos o s
 - **Confirmado:** WhatsApp 311 397 2905 y horario de lunes a sábado, 7:00 a. m.–6:00 p. m., para las tres sedes; también las condiciones generales de domicilio. **Pendiente:** nombres de marcas y catálogo detallado; cómo mostrar/cotizar el precio mayorista sin el umbral automático de seis unidades.
 - **Confirmado:** `Docs/` está vacía. No hay catálogo empresarial, logo ni fotos propias autorizadas allí.
 - **Comprobado parcialmente:** TypeScript pasa. Vite no pudo resolver la página desde la ruta de red compartida; falta una ejecución local verificable en escritorio y celular.
-- **Sin cambios al sitio:** las respuestas de negocio se registraron; todavía no cambié la web.
+- **Actualizado en el sitio:** direcciones de tres sedes, WhatsApp compartido, horario confirmado y texto de domicilios. La interfaz aún no está verificada visualmente.
 
-### 0. Preparar las skills previstas
-Seguir `Plan de mejora/12-chaky-motos/instalar-skills.md` antes de las tareas de diseño, SEO y privacidad. Los ZIP de SEO y tratamiento de datos están presentes pero no instalados; las skills de diseño/móvil indicadas en el archivo también están pendientes. Revisar que no se sobrescriban skills existentes y comprobar la lista al terminar.
+### 0. Preparar las skills previstas — completado
+Instaladas y verificadas en `.agents/skills`: `emil-design-eng`, `mobile-native`, `impeccable`, `seo-organico-ia` y `tratamiento-datos-landing`. Se conservaron licencias y archivos de referencia; no se ejecutaron scripts de las skills.
 
 **Listo cuando:** están disponibles las skills que se van a usar, sin cambios al sitio durante la instalación.
 
 ## Pasos
 
-### 1. Cerrar los datos empresariales
+### 1. Encontrar el punto de partida — completado
+Se confirmó que existe la web y se revisaron su estructura y materiales. `Docs/` está vacía. La revisión de datos empresariales sigue parcialmente abierta: faltan marcas, catálogo detallado y decisión sobre el precio mayorista.
+
+### 1a. Cerrar los datos empresariales
 Ya están confirmadas las sedes, la oferta general, la continuidad de la venta mayorista y la existencia de domicilios condicionados a la compra. Completar direcciones, WhatsApp, horarios, marcas, condiciones mayoristas, criterios de domicilios y catálogo. Poner originales y activos aprobados en `Docs/`.
 
 **Listo cuando:** los datos que se mostrarán tienen fuente y autorización; las contradicciones con `mockData.ts` están resueltas.

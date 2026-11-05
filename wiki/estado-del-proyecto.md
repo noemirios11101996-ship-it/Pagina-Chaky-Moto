@@ -10,6 +10,7 @@
 - **Bloqueo de ejecución/compilación:** Vite 8 desde esta carpeta UNC no resuelve `index.html`; el servidor levantó en el puerto 3000 pero devolvió 404. La unidad temporal de Windows también terminó convertida por Vite/Rolldown a una ruta inválida `../../SRVWORD/...`. No queda servidor activo. Probar desde una ruta local.
 - **Pendiente:** estado visual de publicación/despliegue no identificado; el README conserva instrucciones genéricas de AI Studio.
 - **Siguiente paso:** probar el proyecto desde una ruta local con `npm run dev`/`npm run build`; luego revisar visualmente la página y distinguir datos de demostración de los aprobados por la empresa.
-- **Última actualización de contenido:** se aplicaron en `src/data/mockData.ts` las direcciones de las tres sedes y se actualizó la información de domicilios en `src/views/BranchesView.tsx` y las FAQ. WhatsApp y horarios siguen pendientes.
+- **Última actualización de contenido:** se aplicaron en `src/data/mockData.ts` las direcciones, WhatsApp 311 397 2905 y horario confirmado para las tres sedes; también se actualizaron los domicilios en `src/views/BranchesView.tsx` y las FAQ.
 - **Comprobación más reciente:** TypeScript (`tsc --noEmit`) pasó con las direcciones, WhatsApp y horarios actualizados. La compilación de Vite en una copia local temporal no terminó ni produjo `dist`; desde la ruta UNC ya se había observado un 404. La página no está verificada visualmente.
+- **Skills:** instaladas y verificadas las cinco indicadas en `Plan de mejora/12-chaky-motos/instalar-skills.md`, bajo `.agents/skills/`; no se ejecutó ningún script de esas skills.
 
