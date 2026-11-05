@@ -42,7 +42,7 @@ Resolver el bloqueo de Vite en la ruta UNC usando una copia de trabajo en ruta l
 **Listo cuando:** inicio, rutas principales y recursos cargan; compilación y TypeScript pasan.
 
 ### 3. Corregir sedes y contacto
-Ya se actualizaron las direcciones, el WhatsApp compartido y el horario confirmado de lunes a sábado. Verificar cada botón antes de marcar el paso como terminado.
+Ya se actualizaron las direcciones de La Jagua de Ibirico, Chiriguaná y La Loma, el WhatsApp compartido y el horario confirmado de lunes a sábado. Verificar los tres botones antes de marcar el paso como terminado. Se corrigió el plan fuente para reemplazar la referencia antigua a Valledupar por las tres sedes vigentes.
 
 **Depende de:** pasos 1 y 2.
 
