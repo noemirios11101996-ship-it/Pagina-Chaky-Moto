@@ -23,3 +23,8 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - Creada la rama `main` y publicado el commit inicial en el remoto indicado; el push confirmó la rama nueva.
 - Subidos 54 archivos. `Docs/`, `node_modules/` y secretos quedaron fuera.
 - El `.git` de la carpeta original no admite escritura; se usó una copia temporal saneada. Vite continúa bloqueado por la ruta de red UNC. Ver [[estado-del-proyecto]] y [[pendientes]].
+
+## [2026-11-05] planificación | Revisión de Plan de mejora
+- Leídos el plan, la validación y las instrucciones de entrega; inventariados los ZIP sin extraerlos ni ejecutar su contenido.
+- Confirmado que ya existe un sitio con varias vistas; `Docs/` sigue vacía. El plan propone Valledupar y Chiriguaná, mientras el código lista La Jagua, La Loma y Chiriguaná.
+- Creada [[plan-de-mejora]] con el flujo actual y preguntas de validación. No se modificó el sitio ni el plan original.
