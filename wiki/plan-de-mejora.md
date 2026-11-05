@@ -19,6 +19,11 @@ Tener una página rápida y clara para que las personas encuentren productos o s
 - **Comprobado parcialmente:** TypeScript pasa. Vite no pudo resolver la página desde la ruta de red compartida; falta una ejecución local verificable en escritorio y celular.
 - **Sin cambios de contenido:** la revisión no modificó el sitio ni los archivos originales de `Plan de mejora/`.
 
+### 0. Preparar las skills previstas
+Seguir `Plan de mejora/12-chaky-motos/instalar-skills.md` antes de las tareas de diseño, SEO y privacidad. Los ZIP de SEO y tratamiento de datos están presentes pero no instalados; las skills de diseño/móvil indicadas en el archivo también están pendientes. Revisar que no se sobrescriban skills existentes y comprobar la lista al terminar.
+
+**Listo cuando:** están disponibles las skills que se van a usar, sin cambios al sitio durante la instalación.
+
 ## Pasos
 
 ### 1. Confirmar el negocio y completar fuentes
