@@ -29,3 +29,8 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - Confirmado que ya existe un sitio con varias vistas; `Docs/` sigue vacía. El plan propone Valledupar y Chiriguaná, mientras el código lista La Jagua, La Loma y Chiriguaná.
 - Creada [[plan-de-mejora]] con el flujo actual y preguntas de validación. No se modificó el sitio ni el plan original.
 - Se añadió al plan consolidado el Paso 0 de preparación de skills que aparece en el material original; siguen pendientes y no se instalaron en esta revisión.
+
+## [2026-11-05] validación | Respuesta sobre sedes y oferta
+- La usuaria confirmó tres sedes: La Jagua de Ibirico, Chiriguaná y La Loma, Cesar; la mención antigua de Valledupar queda superada.
+- Confirmó repuestos y lujos para todo tipo de motos, originales y genéricos; mayoristas siguen vigentes y hay domicilios según compra.
+- Actualizados [[empresa]], [[plan-de-mejora]] y [[pendientes]]. Quedan por precisar contactos, horarios y condiciones de mayorista/domicilios.

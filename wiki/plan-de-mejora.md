@@ -4,7 +4,7 @@ estado: activo
 creado: 2026-11-05
 actualizado: 2026-11-05
 tags: [plan, mejoras, chaky-motos]
-fuentes: ["../Plan de mejora/12-chaky-motos/plan-mejoras.md", "../Plan de mejora/12-chaky-motos/validacion-con-cliente.md", "../package.json", "../src/"]
+fuentes: ["../Plan de mejora/12-chaky-motos/plan-mejoras.md", "../Plan de mejora/12-chaky-motos/validacion-con-cliente.md", "../package.json", "../src/", "conversación con la usuaria, 2026-11-05"]
 ---
 # Plan de mejora · Chaky Motos
 
@@ -13,11 +13,13 @@ Tener una página rápida y clara para que las personas encuentren productos o s
 
 ## Punto de partida revisado
 - **Confirmado:** ya existe una página React/TypeScript/Vite, con inicio, catálogo, sedes, promociones, contacto, venta mayorista y lista de cotización.
-- **Confirmado:** el código contiene tres sedes (La Jagua de Ibirico, La Loma y Chiriguaná) y muchos datos de negocio en `src/data/mockData.ts`.
-- **Por confirmar:** el plan entregado menciona Valledupar y Chiriguaná, con dos sedes. Esa lista no coincide con el sitio actual.
-- **Confirmado:** `Docs/` está vacía. No hay catálogo empresarial, logo, fotos propias ni comprobantes de datos de negocio allí.
+- **Confirmado por la usuaria:** las sedes vigentes son La Jagua de Ibirico, Chiriguaná y La Loma, Cesar. Se resolvió la diferencia con el plan antiguo, que mencionaba Valledupar.
+- **Confirmado por la usuaria:** oferta general de repuestos y lujos para todo tipo de motos, incluyendo repuestos originales y genéricos de marcas de alta calidad.
+- **Confirmado por la usuaria:** la venta mayorista continúa y sí se hacen domicilios dependiendo de la compra.
+- **Pendiente:** direcciones completas, WhatsApp y horarios de cada sede; nombres de marcas; criterios de mayorista y domicilios; el catálogo empresarial detallado.
+- **Confirmado:** `Docs/` está vacía. No hay catálogo empresarial, logo ni fotos propias autorizadas allí.
 - **Comprobado parcialmente:** TypeScript pasa. Vite no pudo resolver la página desde la ruta de red compartida; falta una ejecución local verificable en escritorio y celular.
-- **Sin cambios de contenido:** la revisión no modificó el sitio ni los archivos originales de `Plan de mejora/`.
+- **Sin cambios al sitio:** las respuestas de negocio se registraron; todavía no cambié la web.
 
 ### 0. Preparar las skills previstas
 Seguir `Plan de mejora/12-chaky-motos/instalar-skills.md` antes de las tareas de diseño, SEO y privacidad. Los ZIP de SEO y tratamiento de datos están presentes pero no instalados; las skills de diseño/móvil indicadas en el archivo también están pendientes. Revisar que no se sobrescriban skills existentes y comprobar la lista al terminar.
@@ -26,28 +28,28 @@ Seguir `Plan de mejora/12-chaky-motos/instalar-skills.md` antes de las tareas de
 
 ## Pasos
 
-### 1. Confirmar el negocio y completar fuentes
-Acordar sedes vigentes, contactos, horarios, catálogo, marcas, condiciones mayoristas, entregas y medios de pago. Poner documentos, logo y fotos autorizadas en `Docs/`; mantener originales intactos.
+### 1. Cerrar los datos empresariales
+Ya están confirmadas las sedes, la oferta general, la continuidad de la venta mayorista y la existencia de domicilios condicionados a la compra. Completar direcciones, WhatsApp, horarios, marcas, condiciones mayoristas, criterios de domicilios y catálogo. Poner originales y activos aprobados en `Docs/`.
 
 **Listo cuando:** los datos que se mostrarán tienen fuente y autorización; las contradicciones con `mockData.ts` están resueltas.
 
 ### 2. Habilitar una revisión local fiable
-Resolver el bloqueo de Vite en la ruta UNC usando una copia de trabajo en ruta local o una configuración que funcione desde la carpeta compartida. Levantar la página y guardar una referencia visual para escritorio y móvil.
+Resolver el bloqueo de Vite en la ruta UNC usando una copia de trabajo en ruta local o una configuración que funcione desde la carpeta compartida. Levantar la página y revisar escritorio y móvil.
 
 **Listo cuando:** inicio, rutas principales y recursos cargan; compilación y TypeScript pasan.
 
 ### 3. Corregir sedes y contacto
-Mostrar solo las sedes confirmadas, con dirección, horario y botón de WhatsApp propios. Verificar que cada botón abre el número correcto.
+Mantener las tres sedes confirmadas, sustituyendo cualquier dirección, horario o contacto del demo que no coincida. Cada botón de WhatsApp debe abrir el número correcto.
 
-**Depende de:** paso 1.
+**Depende de:** pasos 1 y 2.
 
 ### 4. Ordenar catálogo, productos y servicios
-Organizar categorías con el catálogo real. Revisar títulos, imágenes y disponibilidad; eliminar o corregir elementos de demostración. Nombrar marcas como texto y afirmar representación u originalidad solo con respaldo.
+Organizar categorías con el catálogo real. Revisar títulos, imágenes y disponibilidad; corregir elementos de demostración. Nombrar marcas como texto y afirmar representación u originalidad solo en los términos que la usuaria confirme.
 
 **Depende de:** paso 1.
 
 ### 5. Dejar clara la venta mayorista y el proceso de compra
-Aplicar el mínimo de unidades únicamente a los productos confirmados. Aclarar cómo se cotiza, si hay entrega y qué medios de pago se aceptan; enlazar al canal real.
+Explicar que existe atención mayorista sin publicar mínimo por cantidad. Añadir condiciones de acceso cuando se confirmen. Explicar domicilios solo con sus criterios y cobertura, y enlazar al canal de compra real.
 
 **Depende de:** paso 1.
 
@@ -76,12 +78,10 @@ Probar en escritorio y celular, navegación, sedes, WhatsApp y cotización; comp
 
 **Listo cuando:** cada dato y contacto comprobado coincide con lo aprobado y la página funciona en ambas vistas.
 
-## Preguntas para afinarlo
-1. ¿Cuáles sedes deben quedar: Valledupar y Chiriguaná, o las tres que aparecen hoy (La Jagua, La Loma y Chiriguaná)? ¿Dirección, WhatsApp y horario vigente de cada una?
-2. ¿Qué categorías, servicios y marcas deben priorizarse? ¿Hay autorización para llamarse distribuidor oficial o anunciar repuestos originales?
-3. ¿La venta desde seis unidades sigue vigente? ¿Para qué productos y con qué condiciones?
-4. ¿Ofrecen domicilios y qué medios de pago o proceso de cotización debe explicar la página?
-5. ¿Qué acción quieres priorizar (WhatsApp, llamada, cotización)? ¿Puedes dejar en `Docs/` el catálogo, logo, fotos propias y datos que falten para privacidad (NIT/RUT y correo responsable)?
+## Pendiente para continuar
+- Direcciones completas, WhatsApp y horario de cada sede.
+- Qué significa vender al por mayor «pero no por cantidades»: criterio de acceso y condiciones.
+- Qué condiciones definen un domicilio según la compra.
 
 ## Forma de avanzar
-Trabajar un paso a la vez, preservando originales y haciendo cambios pequeños. No marcar un paso como terminado hasta comprobar su criterio. El inventario del punto de partida ya está revisado; los cambios de contenido comienzan después de confirmar los datos que afectan a la página.
+Trabajar un paso a la vez, preservando originales y haciendo cambios pequeños. No marcar un paso como terminado hasta comprobar su criterio. El inventario del punto de partida está revisado; el paso 1 está iniciado con las confirmaciones de la usuaria.

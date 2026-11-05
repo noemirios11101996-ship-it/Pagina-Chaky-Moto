@@ -4,11 +4,14 @@ estado: provisional
 creado: 2026-11-05
 actualizado: 2026-11-05
 tags: [empresa, identidad, oferta]
-fuentes: ["../index.html", "../src/data/mockData.ts", "../src/components/"]
+fuentes: ["../src/data/mockData.ts", "conversación con la usuaria, 2026-11-05"]
 ---
 # Empresa
 
-- **Confirmado por el código:** el sitio se identifica como CHAKY MOTOS, con la frase «Un Mundo de Servicios»; presenta repuestos y accesorios para motos, catálogo y atención por WhatsApp en tres sedes nombradas La Jagua de Ibirico, La Loma y Chiriguaná, Cesar.
-- **Provisional, requiere validación del negocio:** direcciones, teléfonos, horarios, personas, precios, marcas, inventario, condiciones mayoristas, promociones, reseñas y demás afirmaciones del catálogo/demo. Están en `src/data/mockData.ts`; el nombre del archivo sugiere datos de muestra y no basta como aprobación.
-- **Pendiente:** confirmar oferta real, público prioritario, identidad visual aprobada, canales/contactos vigentes y qué contenido del catálogo se puede publicar.
-- **Pendiente, discrepancia entre fuentes:** `Plan de mejora/12-chaky-motos/validacion-con-cliente.md` propone Valledupar y Chiriguaná; `src/data/mockData.ts` lista La Jagua, La Loma y Chiriguaná. No reemplazar sedes hasta confirmación.
+- **Confirmado por la usuaria:** las sedes vigentes son La Jagua de Ibirico, Chiriguaná y La Loma, Cesar. La propuesta antigua de Valledupar queda superada; no editar su original.
+- **Confirmado por la usuaria:** vende repuestos y lujos para todo tipo de motos, tanto originales como genéricos de marcas que considera de alta calidad.
+- **Pendiente:** nombres de marcas y cualquier afirmación específica de representación oficial, compatibilidad, disponibilidad o calidad que se quiera publicar.
+- **Confirmado por la usuaria:** la venta al por mayor sigue vigente. No se debe anunciar un mínimo por cantidad; el criterio para aplicar condiciones mayoristas queda pendiente.
+- **Confirmado por la usuaria:** hay domicilios dependiendo de la compra. Cobertura y condiciones quedan pendientes.
+- **Pendiente antes de publicar datos de sede:** dirección completa, WhatsApp y horario actual de cada sede. El contenido correspondiente en `src/data/mockData.ts` sigue sin validación individual.
+- **Pendiente:** identidad visual aprobada, datos legales y contenido exacto que se puede publicar.
