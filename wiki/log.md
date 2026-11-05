@@ -19,3 +19,7 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - Creada la wiki inicial y catalogados los datos del código como pendientes de validación empresarial.
 - Alineada la dependencia de esbuild con Vite 8; instalación completada, lockfile creado, npm reportó 0 vulnerabilidades.
 - `tsc --noEmit` pasó. La compilación Vite falló al resolver `index.html` desde la ruta UNC; el servidor arrancó pero respondió 404 y fue detenido. Ver [[estado-del-proyecto]] y [[pendientes]].
+## [2026-11-05] publicación | Primer envío a GitHub
+- Creada la rama `main` y publicado el commit inicial en el remoto indicado; el push confirmó la rama nueva.
+- Subidos 54 archivos. `Docs/`, `node_modules/` y secretos quedaron fuera.
+- El `.git` de la carpeta original no admite escritura; se usó una copia temporal saneada. Vite continúa bloqueado por la ruta de red UNC. Ver [[estado-del-proyecto]] y [[pendientes]].

@@ -5,6 +5,8 @@
 - **Observado:** Node.js v24.22.1, npm 11.19.1 y Git 2.56.0.windows.2 disponibles.
 - **Completado:** dependencias instaladas y `package-lock.json` generado. npm informó 0 vulnerabilidades. Para `esbuild`, se permitió su instalador oficial porque Vite lo necesita en Windows.
 - **Comprobado:** `tsc --noEmit` terminó sin errores.
-- **Bloqueo de ejecución/compilación:** Vite 8 desde esta carpeta UNC no resuelve `index.html`; el servidor levantó en el puerto 3000 pero devolvió 404. La unidad temporal de Windows también terminó convertida por Vite/Rolldown a una ruta inválida `../../SRVWORD/...`. No queda servidor activo. Ejecutar desde una ruta local podría evitar este caso; no se ha probado.
-- **Pendiente:** estado de publicación/despliegue no identificado; el README conserva instrucciones genéricas de AI Studio.
-- **Siguiente paso:** abrir/copiar el proyecto a una ruta local y probar `npm run dev`/`npm run build`; después revisar la página visualmente y distinguir datos de demostración de los aprobados por la empresa.
+- **Publicado:** repositorio GitHub `noemirios11101996-ship-it/Pagina-Chaky-Moto`, rama `main`. El primer envío incluyó el sitio y la wiki; excluyó `Docs/`, dependencias y archivos `.env` privados.
+- **Limitación del espacio local:** la carpeta original no permite escribir dentro de `.git`; se subió desde una copia Git temporal saneada. El contenido local sigue sin historial/remote Git propio.
+- **Bloqueo de ejecución/compilación:** Vite 8 desde esta carpeta UNC no resuelve `index.html`; el servidor levantó en el puerto 3000 pero devolvió 404. La unidad temporal de Windows también terminó convertida por Vite/Rolldown a una ruta inválida `../../SRVWORD/...`. No queda servidor activo. Probar desde una ruta local.
+- **Pendiente:** estado visual de publicación/despliegue no identificado; el README conserva instrucciones genéricas de AI Studio.
+- **Siguiente paso:** probar el proyecto desde una ruta local con `npm run dev`/`npm run build`; luego revisar visualmente la página y distinguir datos de demostración de los aprobados por la empresa.
