@@ -39,3 +39,13 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - Revisadas las menciones del umbral de seis unidades: aparece tanto en el contenido como en los cálculos del cotizador y el catálogo.
 - No se modificaron precios ni totales porque falta definir cómo se determina el precio mayorista si no depende de cantidad.
 - Se actualizaron [[plan-de-mejora]], [[pendientes]] y [[decisiones]]; queda pendiente la regla mayorista y la condición de domicilios.
+
+## [2026-11-05] datos de sede y domicilio | Actualización de información confirmada
+- Registradas direcciones recibidas para La Jagua de Ibirico, Chiriguaná y La Loma.
+- Actualizada la política visible: domicilio dentro del municipio sujeto al valor de compra; pedidos mayoristas fuera del municipio con domicilio gratis.
+- Pendientes WhatsApp y horarios por sede, cobertura mayorista fuera del municipio y definición de la cotización mayorista frente al cálculo antiguo desde seis unidades.
+
+## [2026-11-05] contenido web | Direcciones y domicilios
+- Actualizadas las direcciones de las tres sedes en `src/data/mockData.ts`.
+- Sustituida en la vista de sedes y FAQ la información de envíos no confirmada por la política indicada por la usuaria: domicilio local sujeto al valor de compra; gratis para pedidos mayoristas fuera del municipio.
+- TypeScript pasó. La compilación Vite no terminó en la copia local temporal; no se hizo revisión visual. Los requisitos mayoristas por cantidad aún requieren actualización después de confirmar el flujo de cotización.

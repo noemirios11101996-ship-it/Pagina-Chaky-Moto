@@ -50,7 +50,7 @@ export const SEDES_DATA: Record<string, SedeInfo> = {
     name: 'Sede Principal - La Jagua de Ibirico',
     subtitle: 'Almacén central, bodega mayorista y taller de soporte',
     municipality: 'La Jagua de Ibirico, Cesar',
-    address: 'Calle 7 # 12-45, Barrio Centro',
+    address: 'Carrera 4 #4-58, Barrio Centro, diagonal a los bomberos',
     phone: '+57 321 463 3702',
     altPhone: '+57 323 222 4529',
     whatsapp: '573214633702',
@@ -68,7 +68,7 @@ export const SEDES_DATA: Record<string, SedeInfo> = {
     name: 'Sede La Loma (El Paso, Cesar)',
     subtitle: 'Punto estratégico zona minera y corredor carbonífero',
     municipality: 'La Loma, El Paso, Cesar',
-    address: 'Carrera 5 # 8-30, Zona Comercial Principal',
+    address: 'Calle 10, cra. 16 37, frente a AO',
     phone: '+57 310 687 0934',
     whatsapp: '573106870934',
     whatsappDisplay: '+57 310 687 0934',
@@ -85,7 +85,7 @@ export const SEDES_DATA: Record<string, SedeInfo> = {
     name: 'Sede Chiriguaná',
     subtitle: 'Punto de atención centro del Cesar y municipios vecinos',
     municipality: 'Chiriguaná, Cesar',
-    address: 'Calle 6 # 9-18, Barrio El Carmen',
+    address: 'Calle 8 #7-99, Barrio El Carmen',
     phone: '+57 320 570 8521',
     whatsapp: '573205708521',
     whatsappDisplay: '+57 320 570 8521',
@@ -483,8 +483,8 @@ export const WHOLESALE_BENEFITS = [
   },
   {
     icon: 'local_shipping',
-    title: 'Despachos prioritarios en Cesar',
-    description: 'Envíos diarios y consolidados entre La Jagua, La Loma, Chiriguaná, Becerril, Curumaní y corregimientos.'
+    title: 'Domicilio según el tipo de pedido',
+    description: 'Dentro del municipio, el domicilio depende del valor de compra. Para pedidos mayoristas fuera del municipio, el domicilio es gratis.'
   },
   {
     icon: 'support_agent',
@@ -509,7 +509,7 @@ export const FAQ_LIST = [
   },
   {
     q: '¿Hacen envíos a otros municipios o corregimientos del Cesar?',
-    a: 'Sí. Realizamos despachos continuos a través de líneas intermunicipales y mototransporte a zonas aledañas como Becerril, Curumaní, San Roque, El Paso y veredas carboníferas.'
+    a: 'Dentro del municipio, el domicilio depende del valor de compra. Para pedidos mayoristas fuera del municipio, el domicilio es gratis. Consulta con la sede las condiciones de tu pedido.'
   },
   {
     q: '¿Qué medios de pago reciben en las sedes?',

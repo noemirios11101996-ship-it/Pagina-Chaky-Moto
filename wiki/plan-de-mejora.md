@@ -13,10 +13,10 @@ Tener una página rápida y clara para que las personas encuentren productos o s
 
 ## Punto de partida revisado
 - **Confirmado:** ya existe una página React/TypeScript/Vite, con inicio, catálogo, sedes, promociones, contacto, venta mayorista y lista de cotización.
-- **Confirmado por la usuaria:** las sedes vigentes son La Jagua de Ibirico, Chiriguaná y La Loma, Cesar. Se resolvió la diferencia con el plan antiguo, que mencionaba Valledupar.
+- **Confirmado por la usuaria:** las sedes vigentes son La Jagua de Ibirico, Chiriguaná y La Loma, Cesar. También proporcionó las direcciones; la propuesta antigua de Valledupar queda superada.
 - **Confirmado por la usuaria:** oferta general de repuestos y lujos para todo tipo de motos, incluyendo repuestos originales y genéricos de marcas de alta calidad.
-- **Confirmado por la usuaria:** la venta mayorista continúa y sí se hacen domicilios dependiendo de la compra.
-- **Pendiente:** direcciones completas, WhatsApp y horarios de cada sede; nombres de marcas; criterios de mayorista y domicilios; el catálogo empresarial detallado.
+- **Confirmado por la usuaria:** la venta mayorista sigue y no se determina por valor ni cantidad. Los domicilios dentro del municipio dependen del valor de compra; fuera del municipio son gratis para pedidos mayoristas.
+- **Pendiente:** WhatsApp y horarios de cada sede; nombres de marcas y catálogo detallado; cómo cotizar mayorista sin el umbral automático de seis unidades; cobertura exacta de domicilios gratuitos por fuera del municipio.
 - **Confirmado:** `Docs/` está vacía. No hay catálogo empresarial, logo ni fotos propias autorizadas allí.
 - **Comprobado parcialmente:** TypeScript pasa. Vite no pudo resolver la página desde la ruta de red compartida; falta una ejecución local verificable en escritorio y celular.
 - **Sin cambios al sitio:** las respuestas de negocio se registraron; todavía no cambié la web.
@@ -39,7 +39,7 @@ Resolver el bloqueo de Vite en la ruta UNC usando una copia de trabajo en ruta l
 **Listo cuando:** inicio, rutas principales y recursos cargan; compilación y TypeScript pasan.
 
 ### 3. Corregir sedes y contacto
-Mantener las tres sedes confirmadas, sustituyendo cualquier dirección, horario o contacto del demo que no coincida. Cada botón de WhatsApp debe abrir el número correcto.
+Ya se actualizaron las tres direcciones con la información proporcionada. Confirmar horarios y números de WhatsApp antes de publicarlos. Cada botón debe abrir el número correcto.
 
 **Depende de:** pasos 1 y 2.
 
@@ -49,7 +49,7 @@ Organizar categorías con el catálogo real. Revisar títulos, imágenes y dispo
 **Depende de:** paso 1.
 
 ### 5. Dejar clara la venta mayorista y el proceso de compra
-Explicar que existe atención mayorista sin publicar mínimo por cantidad. Añadir condiciones de acceso cuando se confirmen. Explicar domicilios solo con sus criterios y cobertura, y enlazar al canal de compra real.
+Explicar que existe atención mayorista sin mínimo de valor o cantidad. Acordar si se muestra una tarifa fija o se solicita cotización. Indicar que el domicilio local depende del valor de compra y que el mayorista fuera del municipio tiene domicilio gratis.
 
 **Depende de:** paso 1.
 
@@ -79,14 +79,15 @@ Probar en escritorio y celular, navegación, sedes, WhatsApp y cotización; comp
 **Listo cuando:** cada dato y contacto comprobado coincide con lo aprobado y la página funciona en ambas vistas.
 
 ## Pendiente para continuar
-- Dirección completa, WhatsApp y horario de cada una de las tres sedes.
-- Regla para cotizar al por mayor: la página actual aplica automáticamente el precio y el ahorro al llegar a seis unidades. La usuaria confirmó que la venta mayorista sigue, pero no se maneja por cantidades; falta definir qué debe activar ese precio. No cambiar totales ni tarifas hasta aclararlo.
-- Cobertura y condición que determina si una compra recibe domicilio.
+- WhatsApp y horario actual de cada una de las tres sedes.
+- Cómo debe mostrar o calcularse el precio mayorista: la usuaria confirmó que no depende de valor ni cantidad, pero el sistema actual activa precios y ahorros desde seis unidades.
+- Cobertura exacta de los domicilios gratis para pedidos mayoristas fuera del municipio. Para domicilios locales, el valor mínimo todavía no está definido.
+- Confirmar la forma escrita de la dirección de La Loma («calle 10 cra 16 37 frente a AO») antes de publicarla si se necesita formato postal normalizado.
 
 ## Preguntas para continuar
-1. ¿Cuál es la dirección completa, WhatsApp y horario de La Jagua de Ibirico, Chiriguaná y La Loma, respectivamente?
-2. Si el precio mayorista no depende de cantidad, ¿cómo se determina: por tipo de cliente, cotización individual u otra regla?
-3. ¿En qué zonas hacen domicilios y qué condición de la compra los habilita?
+1. ¿Qué WhatsApp y horario vigentes corresponden a cada sede?
+2. ¿Quieres que el precio mayorista se muestre como una tarifa por producto para cualquier cantidad, o que el cliente solicite una cotización al asesor? Así reemplazo correctamente el cálculo automático desde seis unidades.
+3. ¿El domicilio mayorista gratis fuera del municipio aplica a todas las zonas o hay límites de cobertura?
 
 ## Forma de avanzar
-Trabajar un paso a la vez, preservando originales y haciendo cambios pequeños. No marcar un paso como terminado hasta comprobar su criterio. El inventario del punto de partida está revisado; el paso 1 está iniciado con las confirmaciones de la usuaria. No cambiar la lógica de precio mayorista hasta aclarar el criterio comercial.
+Trabajar un paso a la vez, preservando originales y haciendo cambios pequeños. No marcar un paso como terminado hasta comprobar su criterio. Las direcciones y la política general de domicilios ya se incorporaron al sitio; teléfonos, horarios y la regla de cotización siguen pendientes.

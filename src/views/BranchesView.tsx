@@ -259,27 +259,27 @@ export const BranchesView: React.FC<BranchesViewProps> = ({
               </div>
               <div>
                 <h3 className="font-headline-sm text-base font-bold text-primary">
-                  Despachos Diarios en el Corredor Minero y Municipios Vecinos
+                  Domicilios según el pedido
                 </h3>
                 <p className="text-xs text-on-surface-variant">
-                  Coordinación logística rápida desde nuestras tres bodegas
+                  Consulta las condiciones con tu sede
                 </p>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-              Realizamos envíos periódicos a través de empresas transportadoras, cooperativas de buses y encomiendas para: <strong>La Jagua de Ibirico, La Loma, Chiriguaná, Becerril, Curumaní, San Roque, El Paso, Casacará, Codazzi y zonas de explotación minera</strong>.
+              Dentro del municipio, el domicilio depende del valor de compra. Para pedidos mayoristas fuera del municipio, el domicilio es gratis. Consulta con tu sede las condiciones antes de confirmar el pedido.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-2 text-xs">
               <span className="px-3 py-1 rounded-full bg-surface-container text-primary font-semibold">
-                ✓ Embalaje protector para repuestos delicados
+                ✓ Domicilio sujeto al valor de compra dentro del municipio
               </span>
               <span className="px-3 py-1 rounded-full bg-surface-container text-primary font-semibold">
-                ✓ Despacho en menos de 24 horas hábiles
+                ✓ Domicilio gratis para pedidos mayoristas fuera del municipio
               </span>
               <span className="px-3 py-1 rounded-full bg-surface-container text-primary font-semibold">
-                ✓ Guía y seguimiento vía WhatsApp
+                ✓ Confirma las condiciones con tu sede
               </span>
             </div>
           </div>
