@@ -5,7 +5,6 @@ export interface Product {
   brand: string;
   code: string;
   priceDetal: number;
-  priceMayor: number;
   image: string;
   galleryImages: string[];
   compatibility: string[];
@@ -116,7 +115,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Choho Racing',
     code: 'CH-428H-128',
     priceDetal: 145000,
-    priceMayor: 118000,
     image: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80',
@@ -148,7 +146,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Ichiban Pro',
     code: 'ICH-PF-302',
     priceDetal: 35000,
-    priceMayor: 26000,
     image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80'
@@ -176,7 +173,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Motul',
     code: 'MOT-7100-10W40',
     priceDetal: 68000,
-    priceMayor: 54000,
     image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80'
@@ -205,7 +201,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Kenda Tires',
     code: 'KEN-100-90-18',
     priceDetal: 185000,
-    priceMayor: 152000,
     image: 'https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80'
@@ -234,7 +229,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Magna Power',
     code: 'MAG-YTX7A-BS',
     priceDetal: 98000,
-    priceMayor: 79000,
     image: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80'
@@ -263,7 +257,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Revo Moto Parts',
     code: 'REV-CIL-NKD125',
     priceDetal: 175000,
-    priceMayor: 142000,
     image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80'
@@ -291,7 +284,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Shaft Helmets',
     code: 'SH-581-PRO',
     priceDetal: 245000,
-    priceMayor: 198000,
     image: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80'
@@ -320,7 +312,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'NGK Japón',
     code: 'NGK-CPR8EA-IX',
     priceDetal: 48000,
-    priceMayor: 37000,
     image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80'
@@ -348,7 +339,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Revo Heavy Duty',
     code: 'REV-AMORT-BOXER',
     priceDetal: 135000,
-    priceMayor: 108000,
     image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80'
@@ -376,7 +366,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'NightHawk LED',
     code: 'LED-H4-PROY',
     priceDetal: 55000,
-    priceMayor: 41000,
     image: 'https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=800&q=80'
@@ -404,7 +393,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Braking Casarella',
     code: 'CAS-DISC-NS200',
     priceDetal: 110000,
-    priceMayor: 89000,
     image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80'
@@ -432,7 +420,6 @@ export const PRODUCTS_DATA: Product[] = [
     brand: 'Motul',
     code: 'MOT-C2-400ML',
     priceDetal: 42000,
-    priceMayor: 33000,
     image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80'
@@ -471,9 +458,9 @@ export const INITIAL_CART_ITEMS: CartItem[] = [
 
 export const WHOLESALE_BENEFITS = [
   {
-    icon: 'percent',
-    title: 'Tarifas especiales desde 6 unidades',
-    description: 'Aplica a compras de 6 o más unidades de una misma referencia. Margen asegurado para talleres y almacenes aliados.'
+    icon: 'request_quote',
+    title: 'Cotización mayorista por WhatsApp',
+    description: 'Envía las referencias y cantidades que necesitas para recibir una cotización y confirmar disponibilidad.'
   },
   {
     icon: 'local_shipping',
@@ -498,8 +485,8 @@ export const FAQ_LIST = [
     a: 'Seleccionas los repuestos o accesorios que necesitas en nuestro catálogo web, configuras las cantidades y tu sede más cercana (La Jagua, La Loma o Chiriguaná). Con un solo clic se genera tu lista organizada que abres en WhatsApp para confirmar stock y coordinar entrega.'
   },
   {
-    q: '¿Cuál es el requisito para obtener precio de mayorista?',
-    a: 'El precio mayorista aplica a partir de 6 unidades de la misma referencia de producto. Esto permite a talleres mecánicos y almacenes obtener márgenes competitivos de reventa.'
+    q: '¿Cómo solicito una cotización mayorista?',
+    a: 'Envíanos por WhatsApp las referencias y cantidades que necesitas. El equipo te confirma el precio mayorista, la disponibilidad y las condiciones de entrega.'
   },
   {
     q: '¿Hacen envíos a otros municipios o corregimientos del Cesar?',
@@ -516,12 +503,6 @@ export const FAQ_LIST = [
 ];
 
 export const TESTIMONIALS_DATA = [
-  {
-    name: 'Jhon Jairo Beleño',
-    role: 'Taller Motores del Cesar (La Loma)',
-    comment: 'Llevo 3 años surtiendo los kits de arrastre y pastillas en Chaky Motos. Los precios por mayor desde 6 unidades me permiten tener buen margen y nunca me han quedado mal con un repuesto.',
-    rating: 5
-  },
   {
     name: 'Yurleidis Paternina',
     role: 'Cliente Particular (La Jagua de Ibirico)',

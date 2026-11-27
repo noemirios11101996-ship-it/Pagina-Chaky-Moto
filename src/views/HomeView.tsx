@@ -87,7 +87,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-lg transition-all cursor-pointer border border-primary/20"
                 >
                   <span className="material-symbols-outlined text-secondary">inventory_2</span>
-                  <span>Canal Mayoristas (≥ 6 unds)</span>
+                  <span>Canal Mayoristas</span>
                 </button>
 
                 <a
@@ -139,7 +139,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     ¿Tienes taller o almacén de motos?
                   </h3>
                   <p className="text-xs text-primary-fixed-dim mt-1">
-                    Accede a nuestra lista de precios mayorista comprando desde 6 unidades por referencia.
+                    Solicita una cotización mayorista por WhatsApp con las referencias y cantidades que necesitas.
                   </p>
                   <button
                     onClick={() => onNavigate('mayoristas')}
@@ -171,11 +171,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
             <div className="p-5 rounded-2xl bg-surface-container-low border border-surface-container flex flex-col gap-2">
               <div className="w-10 h-10 rounded-xl bg-secondary text-white flex items-center justify-center">
-                <span className="material-symbols-outlined text-[22px]">percent</span>
+                <span className="material-symbols-outlined text-[22px]">request_quote</span>
               </div>
               <h4 className="font-headline-sm text-sm font-bold text-primary">Precio Detal y Mayorista</h4>
               <p className="text-xs text-on-surface-variant leading-relaxed">
-                Precios justos por unidad y descuentos automáticos para pedidos al por mayor desde 6 unidades de la misma referencia.
+                Consulta por WhatsApp el precio mayorista de las referencias y cantidades que necesitas.
               </p>
             </div>
 
@@ -260,7 +260,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 Repuestos y Accesorios Más Buscados
               </h2>
               <p className="text-sm text-on-surface-variant mt-1">
-                Precios unitarios al detal con descuento mayorista desde 6 unidades
+                Consulta por WhatsApp la cotización mayorista de cualquier referencia.
               </p>
             </div>
             <button
@@ -273,9 +273,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => {
-              const hasWholesaleDiscount = product.priceMayor < product.priceDetal;
-              return (
+            {featuredProducts.map((product) => (
                 <div
                   key={product.id}
                   className="rounded-2xl bg-surface-container-lowest border border-surface-container overflow-hidden hover:shadow-lg transition-all flex flex-col justify-between group"
@@ -289,11 +287,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-primary text-white text-[10px] font-bold uppercase tracking-wider">
                       {product.brand}
                     </span>
-                    {hasWholesaleDiscount && (
-                      <span className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-secondary text-white text-[10px] font-bold shadow-xs">
-                        Mayorista ≥ 6
-                      </span>
-                    )}
                   </div>
 
                   <div className="p-4 flex flex-col flex-1 justify-between gap-3">
@@ -316,12 +309,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
                           ${product.priceDetal.toLocaleString('es-CO')}
                         </span>
                       </div>
-                      {hasWholesaleDiscount && (
-                        <div className="flex items-center justify-between text-[11px] border-t border-surface-container pt-1 text-secondary font-semibold">
-                          <span>Mayorista (≥6 und):</span>
-                          <span>${product.priceMayor.toLocaleString('es-CO')} c/u</span>
-                        </div>
-                      )}
                     </div>
 
                     <div className="flex items-center gap-2 pt-1">
@@ -341,8 +328,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              ))}
           </div>
         </div>
       </section>
@@ -360,7 +346,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 ¿Compras repuestos por mayor para tu negocio?
               </h2>
               <p className="text-sm text-primary-fixed-dim leading-relaxed max-w-2xl">
-                Aprovecha nuestra política mayorista: obtén tarifas especiales en compras a partir de <strong className="text-white">6 unidades de una misma referencia</strong>. Despachos rápidos entre municipios del Cesar, facturación formal y garantía técnica.
+                Cotiza por WhatsApp las referencias y cantidades que necesitas. El equipo confirma los precios y la disponibilidad.
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <button
@@ -371,7 +357,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 </button>
                 <a
                   href={`https://wa.me/${SEDES_DATA.jagua.whatsapp}?text=${encodeURIComponent(
-                    'Hola, soy propietario de taller/almacén y deseo cotizar repuestos por mayor (6+ unidades).'
+                    'Hola, deseo solicitar una cotización mayorista. Estas son las referencias y cantidades que necesito:'
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -386,10 +372,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="lg:col-span-4 bg-primary-container/60 p-6 rounded-2xl border border-white/10 space-y-3">
               <h3 className="font-headline-sm text-sm font-bold text-white flex items-center gap-2">
                 <span className="material-symbols-outlined text-secondary-fixed">rule</span>
-                Regla Comercial Mayorista
+                Cotización Mayorista
               </h3>
               <p className="text-xs text-primary-fixed-dim leading-relaxed">
-                Para activar el precio por mayor en cotización y factura, se requiere un volumen mínimo de <strong>6 unidades de la misma referencia</strong> (ej. 6 bujías NGK, 6 kits de arrastre Choho o 6 aceites Motul).
+                Envía tus referencias y cantidades por WhatsApp. El precio mayorista se confirma mediante cotización, sin cálculo automático por cantidad.
               </p>
               <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-xs">
                 <span className="font-bold text-secondary-fixed">Sede Bodega Central:</span>
@@ -506,7 +492,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
               <h4 className="font-headline-sm text-sm font-bold text-primary mb-1">Arma Tu Lista</h4>
               <p className="text-xs text-on-surface-variant leading-relaxed">
-                Agrega repuestos a &quot;Mi Pedido&quot;. Si añades 6 o más unidades de un producto, se activa el precio mayorista.
+                Agrega las referencias y cantidades a &quot;Mi Pedido&quot;. Si compras por mayor, solicita la cotización por WhatsApp.
               </p>
             </div>
 

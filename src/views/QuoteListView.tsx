@@ -26,6 +26,7 @@ export const QuoteListView: React.FC<QuoteListViewProps> = ({
   const [customerPhone, setCustomerPhone] = useState('');
   const [customerCity, setCustomerCity] = useState('');
   const [isFinancingSistecredito, setIsFinancingSistecredito] = useState(false);
+  const [requestWholesaleQuote, setRequestWholesaleQuote] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const activeSede = SEDES_DATA[selectedSede] || SEDES_DATA['jagua'];
@@ -38,13 +39,7 @@ export const QuoteListView: React.FC<QuoteListViewProps> = ({
     0
   );
 
-  const finalTotal = cart.reduce((sum, item) => {
-    const isWholesale = item.quantity >= 6;
-    const unitPrice = isWholesale ? item.product.priceMayor : item.product.priceDetal;
-    return sum + unitPrice * item.quantity;
-  }, 0);
-
-  const totalSavings = subtotalRegular - finalTotal;
+  const referenceTotal = subtotalRegular;
 
   // Generate WhatsApp formatted text
   const generateWhatsAppMessage = () => {
@@ -61,24 +56,22 @@ export const QuoteListView: React.FC<QuoteListViewProps> = ({
     ];
 
     cart.forEach((item, index) => {
-      const isWholesale = item.quantity >= 6;
-      const unitPrice = isWholesale ? item.product.priceMayor : item.product.priceDetal;
-      const sub = unitPrice * item.quantity;
       lines.push(
         `${index + 1}. ${item.product.name} (Cód: ${item.product.code})` +
-        `\n   • Cantidad: ${item.quantity} unds ${isWholesale ? '*(Tarifa Mayorista)*' : ''}` +
-        `\n   • Valor Unit: $${unitPrice.toLocaleString('es-CO')}` +
-        `\n   • Subtotal: $${sub.toLocaleString('es-CO')}`
+        `\n   • Cantidad solicitada: ${item.quantity} unds` +
+        `\n   • Precio al detal de referencia: $${item.product.priceDetal.toLocaleString('es-CO')}`
       );
     });
 
     lines.push('');
-    if (totalSavings > 0) {
-      lines.push(`*Ahorro por mayorista:* $${totalSavings.toLocaleString('es-CO')}`);
-    }
-    lines.push(`*TOTAL ESTIMADO:* $${finalTotal.toLocaleString('es-CO')}`);
+    lines.push(`*Subtotal al detal de referencia:* $${referenceTotal.toLocaleString('es-CO')}`);
+    lines.push(
+      requestWholesaleQuote
+        ? '*También solicito cotización del precio mayorista para las referencias y cantidades indicadas.*'
+        : '*Por favor confirmar precio al detal y disponibilidad para las referencias y cantidades indicadas.*'
+    );
     lines.push('');
-    lines.push('Por favor confirmar disponibilidad en mostrador y tiempo de despacho.');
+    lines.push('Por favor confirmar precio, disponibilidad y condiciones de entrega.');
 
     return lines.filter((l) => l !== '').join('\n');
   };
@@ -168,7 +161,7 @@ export const QuoteListView: React.FC<QuoteListViewProps> = ({
           </div>
         </div>
 
-        {/* Wholesale rule reminder banner */}
+        {/* Wholesale quote reminder */}
         <div className="mb-6 p-4 rounded-2xl bg-surface-container-low border border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-secondary text-white flex items-center justify-center flex-shrink-0">
@@ -176,16 +169,22 @@ export const QuoteListView: React.FC<QuoteListViewProps> = ({
             </div>
             <div>
               <h4 className="text-xs font-bold text-on-surface">
-                Regla para Precio de Mayorista:
+                ¿Quieres incluir una cotización mayorista?
               </h4>
               <p className="text-xs text-on-surface-variant">
-                Se activa automáticamente al alcanzar <strong>6 o más unidades de una misma referencia</strong>.
+                El asesor confirma el precio por WhatsApp. No se activa un descuento automático por cantidad.
               </p>
             </div>
           </div>
-          <span className="text-xs font-bold text-primary bg-surface-container px-3 py-1 rounded-full self-start sm:self-center">
-            {cart.filter((c) => c.quantity >= 6).length} referencia(s) con precio mayorista
-          </span>
+          <label className="flex items-center gap-2 text-xs font-semibold text-primary cursor-pointer self-start sm:self-center">
+            <input
+              type="checkbox"
+              checked={requestWholesaleQuote}
+              onChange={(event) => setRequestWholesaleQuote(event.target.checked)}
+              className="w-4 h-4 accent-primary"
+            />
+            Solicitar precio mayorista
+          </label>
         </div>
 
         {/* Empty state */}
@@ -233,12 +232,8 @@ export const QuoteListView: React.FC<QuoteListViewProps> = ({
               </div>
 
               {cart.map((item) => {
-                const isWholesale = item.quantity >= 6;
-                const unitPrice = isWholesale ? item.product.priceMayor : item.product.priceDetal;
+                const unitPrice = item.product.priceDetal;
                 const itemTotal = unitPrice * item.quantity;
-                const itemSavings = isWholesale
-                  ? (item.product.priceDetal - item.product.priceMayor) * item.quantity
-                  : 0;
 
                 return (
                   <div
@@ -272,23 +267,7 @@ export const QuoteListView: React.FC<QuoteListViewProps> = ({
                             ${unitPrice.toLocaleString('es-CO')}
                           </span>
                           <span className="text-[11px] text-outline">c/u</span>
-                          {isWholesale && (
-                            <span className="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold">
-                              Tarifa Mayorista
-                            </span>
-                          )}
                         </div>
-
-                        {!isWholesale && (
-                          <p className="text-[10px] text-secondary font-medium">
-                            Lleva {6 - item.quantity} más para activar tarifa mayorista (${item.product.priceMayor.toLocaleString('es-CO')})
-                          </p>
-                        )}
-                        {itemSavings > 0 && (
-                          <p className="text-[10px] text-emerald-700 font-bold">
-                            Ahorras ${itemSavings.toLocaleString('es-CO')} en este item
-                          </p>
-                        )}
                       </div>
                     </div>
 
@@ -406,26 +385,21 @@ export const QuoteListView: React.FC<QuoteListViewProps> = ({
                 {/* Subtotals Breakdown */}
                 <div className="space-y-2 pt-2 border-t border-surface-container text-xs">
                   <div className="flex items-center justify-between text-on-surface-variant">
-                    <span>Subtotal precio regular (detal):</span>
+                    <span>Subtotal al detal de referencia:</span>
                     <span>${subtotalRegular.toLocaleString('es-CO')}</span>
                   </div>
 
-                  {totalSavings > 0 && (
-                    <div className="flex items-center justify-between text-emerald-700 font-bold">
-                      <span className="flex items-center gap-1">
-                        <span className="material-symbols-outlined text-[15px]">savings</span>
-                        Descuento Mayorista (≥ 6 unds):
-                      </span>
-                      <span>-${totalSavings.toLocaleString('es-CO')}</span>
-                    </div>
-                  )}
-
                   <div className="flex items-baseline justify-between pt-3 border-t border-surface-container">
-                    <span className="font-bold text-sm text-primary">Total Estimado:</span>
+                    <span className="font-bold text-sm text-primary">Referencia al detal:</span>
                     <span className="text-2xl font-black text-primary">
-                      ${finalTotal.toLocaleString('es-CO')}
+                      ${referenceTotal.toLocaleString('es-CO')}
                     </span>
                   </div>
+                  <p className="text-[11px] text-on-surface-variant">
+                    {requestWholesaleQuote
+                      ? 'El precio mayorista se confirmará por WhatsApp; no está incluido en esta referencia al detal.'
+                      : 'Puedes marcar la opción mayorista arriba para solicitar otra cotización por WhatsApp.'}
+                  </p>
                 </div>
 
                 {/* Preformatted WhatsApp Preview */}

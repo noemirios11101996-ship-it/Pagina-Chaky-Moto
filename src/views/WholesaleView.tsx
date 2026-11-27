@@ -31,10 +31,10 @@ export const WholesaleView: React.FC<WholesaleViewProps> = ({
 *Ubicación:* ${city || 'Departamento del Cesar'}
 *Sede para despacho:* ${targetSede.name}
 
-*REPUESTOS O REFERENCIAS SOLICITADAS (Mínimo 6 unidades por referencia):*
+*REFERENCIAS Y CANTIDADES SOLICITADAS:*
 ${requestedReferences}
 
-Solicito confirmación de precios mayoristas, disponibilidad de lotes y tiempos de despacho.`;
+Solicito cotización mayorista, confirmación de disponibilidad y condiciones de entrega. No asumir un precio hasta que el equipo confirme la cotización.`;
 
     window.open(`https://wa.me/${targetSede.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
   };
@@ -79,7 +79,7 @@ Solicito confirmación de precios mayoristas, disponibilidad de lotes y tiempos 
               </h1>
 
               <p className="font-headline-sm text-surface-variant font-medium text-base sm:text-lg">
-                Solicita una cotización mayorista desde 6 unidades de la misma referencia
+                Solicita una cotización mayorista por WhatsApp con las referencias y cantidades que necesitas
               </p>
 
               <p className="font-body-md text-xs sm:text-sm text-tertiary-fixed-dim max-w-2xl leading-relaxed">
@@ -159,7 +159,7 @@ Solicito confirmación de precios mayoristas, disponibilidad de lotes y tiempos 
         </div>
       </section>
 
-      {/* Regla de Mínimos Section */}
+      {/* Wholesale quote process */}
       <section id="regla-minimos" className="w-full py-12 bg-surface-container-lowest border-b border-surface-container">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10">
@@ -167,10 +167,10 @@ Solicito confirmación de precios mayoristas, disponibilidad de lotes y tiempos 
               Condición Comercial
             </span>
             <h2 className="font-headline-xl text-primary font-extrabold tracking-tight mt-1">
-              ¿Cómo funciona la regla de 6 unidades?
+              ¿Cómo solicitar una cotización mayorista?
             </h2>
             <p className="text-xs sm:text-sm text-on-surface-variant mt-2 leading-relaxed">
-              Para garantizar que los precios especiales beneficien a talleres mecánicos y almacenes de reventa, aplicamos una regla simple y transparente:
+              La venta mayorista sigue vigente. Envía las referencias y cantidades; el equipo confirma el precio y la disponibilidad por WhatsApp.
             </p>
           </div>
 
@@ -178,48 +178,48 @@ Solicito confirmación de precios mayoristas, disponibilidad de lotes y tiempos 
             <div className="p-6 rounded-2xl bg-emerald-50/70 border-2 border-emerald-500/40 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-emerald-800 font-bold text-sm">
-                  <span className="material-symbols-outlined text-[22px]">check_circle</span>
-                  <span>SÍ APLICA PRECIO MAYORISTA</span>
+                  <span className="material-symbols-outlined text-[22px]">format_list_numbered</span>
+                  <span>QUÉ INCLUIR EN TU SOLICITUD</span>
                 </div>
                 <ul className="space-y-2 text-xs text-emerald-950">
                   <li className="flex items-start gap-2">
                     <span className="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 mt-0.5">done</span>
-                    <span><strong>6 o más unidades del mismo código:</strong> Ej. 6 Kits de Arrastre Choho Boxer CT 100.</span>
+                    <span>Nombre o código de cada repuesto que necesitas.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 mt-0.5">done</span>
-                    <span><strong>6 o más aceites Motul 7100 10W40:</strong> Se liquida a tarifa mayorista por litro.</span>
+                    <span>Cantidad solicitada por referencia.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="material-symbols-outlined text-[16px] text-emerald-600 shrink-0 mt-0.5">done</span>
-                    <span><strong>Lotes por caja cerrada:</strong> Bujías por caja de 10 unidades o llantas por pares/docena.</span>
+                    <span>Sede para consultar disponibilidad y coordinar entrega o recogida.</span>
                   </li>
                 </ul>
               </div>
               <div className="p-3 bg-white/70 rounded-xl text-[11px] text-emerald-900 font-medium">
-                Descuentos del 15% al 25% respecto al precio de mostrador al detal.
+                No se aplica un mínimo de cantidad automático en la página.
               </div>
             </div>
 
             <div className="p-6 rounded-2xl bg-amber-50/70 border-2 border-amber-500/40 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-amber-900 font-bold text-sm">
-                  <span className="material-symbols-outlined text-[22px]">cancel</span>
-                  <span>NO APLICA PRECIO MAYORISTA</span>
+                  <span className="material-symbols-outlined text-[22px]">support_agent</span>
+                  <span>QUÉ TE CONFIRMA EL EQUIPO</span>
                 </div>
                 <ul className="space-y-2 text-xs text-amber-950">
                   <li className="flex items-start gap-2">
                     <span className="material-symbols-outlined text-[16px] text-amber-700 shrink-0 mt-0.5">close</span>
-                    <span><strong>Compras de 1 a 5 unidades de una misma referencia:</strong> Se aplica precio detal de mostrador.</span>
+                    <span>Precio mayorista para las referencias y cantidades enviadas.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="material-symbols-outlined text-[16px] text-amber-700 shrink-0 mt-0.5">close</span>
-                    <span><strong>6 repuestos de diferentes referencias mezcladas:</strong> (Ej: 1 bujía + 1 llanta + 1 aceite + 1 pastilla + 1 guante + 1 espejo).</span>
+                    <span>Disponibilidad y condiciones de despacho o recogida en la sede elegida.</span>
                   </li>
                 </ul>
               </div>
               <div className="p-3 bg-white/70 rounded-xl text-[11px] text-amber-900 font-medium">
-                Si requieres pocas unidades surtidas, usa nuestro cotizador al detal normal.
+                Para pedidos mayoristas fuera del municipio, el domicilio es gratis. Dentro del municipio depende del valor de compra.
               </div>
             </div>
           </div>
@@ -363,7 +363,7 @@ Solicito confirmación de precios mayoristas, disponibilidad de lotes y tiempos 
 
               <div>
                 <label className="text-xs font-bold text-on-surface block mb-1">
-                  Referencias y Cantidades Requeridas (Mínimo 6 unds por referencia):
+                  Referencias y cantidades que necesitas:
                 </label>
                 <textarea
                   rows={4}
@@ -387,7 +387,7 @@ Solicito confirmación de precios mayoristas, disponibilidad de lotes y tiempos 
               </button>
 
               <p className="text-[11px] text-center text-outline">
-                Respondemos en minutos con disponibilidad en bodega y liquidación de fletes.
+                El equipo te confirmará el precio, la disponibilidad y las condiciones de entrega.
               </p>
             </form>
           </div>

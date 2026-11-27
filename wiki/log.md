@@ -69,3 +69,8 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - La copia `C:\Users\noemi.e\Documents\Pagina Chaky` quedó conectada a `origin/main`; no se sobrescribió el árbol de trabajo. `Plan de mejora/` y `compartida/` se dejaron sin versionar.
 - `npm run dev` inició Vite en el puerto 3000 desde esta carpeta y `http://localhost:3000/` respondió HTTP 200.
 - Añadida `CHECKLIST-MEJORAS.md` a la raíz y publicada en GitHub. Sigue pendiente revisar visualmente la página y los tres botones de WhatsApp.
+
+## [2026-11-27] mayorista | Cotización por WhatsApp
+- La usuaria confirmó que el precio mayorista debe cotizarse por WhatsApp.
+- Eliminados el umbral y los descuentos automáticos de seis unidades; se actualizó la solicitud mayorista, catálogo, detalle, lista de pedido y textos de inicio/contacto.
+- `npm run lint` pasó y `npm run build` generó `dist/`. La revisión visual y los clics de WhatsApp siguen pendientes.

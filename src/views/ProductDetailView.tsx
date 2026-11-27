@@ -24,10 +24,8 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
   const [addedNotice, setAddedNotice] = useState(false);
 
   const activeSede = SEDES_DATA[selectedSede] || SEDES_DATA['jagua'];
-  const isWholesale = quantity >= 6;
-  const currentUnitPrice = isWholesale ? product.priceMayor : product.priceDetal;
+  const currentUnitPrice = product.priceDetal;
   const totalPrice = currentUnitPrice * quantity;
-  const savings = isWholesale ? (product.priceDetal - product.priceMayor) * quantity : 0;
 
   const relatedProducts = PRODUCTS_DATA
     .filter((p) => p.id !== product.id && (p.category === product.category || p.brand === product.brand))
@@ -43,9 +41,9 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
 - Producto: ${product.name}
 - Código: ${product.code}
 - Marca: ${product.brand}
-- Cantidad: ${quantity} unidad(es) ${isWholesale ? '(Aplica precio mayorista)' : ''}
-- Total estimado: $${totalPrice.toLocaleString('es-CO')}
-¿Tienen disponibilidad en la sede ${activeSede.municipality.split(',')[0]} para despacho o recogida?`;
+- Cantidad: ${quantity} unidad(es)
+- Subtotal al detal de referencia: $${totalPrice.toLocaleString('es-CO')}
+Por favor confirmen disponibilidad y el precio para esta cantidad. Si aplica tarifa mayorista, indíquenme la cotización. ¿Está disponible en ${activeSede.municipality.split(',')[0]} para despacho o recogida?`;
 
   return (
     <div className="flex flex-col w-full">
@@ -102,11 +100,6 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
                 <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-white text-xs font-bold uppercase tracking-wider">
                   {product.brand}
                 </span>
-                {isWholesale && (
-                  <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-secondary text-white text-xs font-bold shadow-md animate-pulse">
-                    Precio Mayorista Activado
-                  </span>
-                )}
               </div>
 
               {/* Thumbnail selector */}
@@ -193,11 +186,6 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
                       <span className="text-3xl font-extrabold text-primary">
                         ${currentUnitPrice.toLocaleString('es-CO')}
                       </span>
-                      {isWholesale && (
-                        <span className="text-sm text-outline line-through">
-                          ${product.priceDetal.toLocaleString('es-CO')}
-                        </span>
-                      )}
                     </div>
                   </div>
 
@@ -206,13 +194,9 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
                       Condición de tarifa:
                     </span>
                     <span
-                      className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-bold mt-1 ${
-                        isWholesale
-                          ? 'bg-secondary text-white'
-                          : 'bg-primary text-white'
-                      }`}
+                      className="inline-block px-2.5 py-0.5 rounded-full text-xs font-bold mt-1 bg-primary text-white"
                     >
-                      {isWholesale ? 'Mayorista (≥6 und)' : 'Detal (1-5 und)'}
+                      Precio al detal
                     </span>
                   </div>
                 </div>
@@ -223,19 +207,9 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
                     info
                   </span>
                   <div className="text-xs">
-                    <p className="font-bold text-on-surface">
-                      Regla comercial para precios mayoristas:
-                    </p>
+                    <p className="font-bold text-on-surface">¿Necesitas precio mayorista?</p>
                     <p className="text-on-surface-variant mt-0.5 leading-relaxed">
-                      Lleva <strong>6 o más unidades</strong> de esta referencia para pagar a <strong>${product.priceMayor.toLocaleString('es-CO')} c/u</strong>.
-                      {!isWholesale && (
-                        <button
-                          onClick={() => setQuantity(6)}
-                          className="text-secondary font-bold hover:underline block mt-1 cursor-pointer"
-                        >
-                          → Activar precio mayorista seleccionando 6 unidades
-                        </button>
-                      )}
+                      Solicita una cotización por WhatsApp. Indica la cantidad y la sede; el equipo confirma el precio y la disponibilidad.
                     </p>
                   </div>
                 </div>
@@ -270,15 +244,10 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
                   </div>
 
                   <div className="text-right">
-                    <span className="text-xs text-outline font-medium">Subtotal Estimado:</span>
+                    <span className="text-xs text-outline font-medium">Subtotal al detal de referencia:</span>
                     <p className="text-xl font-black text-primary">
                       ${totalPrice.toLocaleString('es-CO')}
                     </p>
-                    {savings > 0 && (
-                      <p className="text-[11px] text-emerald-700 font-bold">
-                        ¡Ahorras ${savings.toLocaleString('es-CO')} con tarifa mayorista!
-                      </p>
-                    )}
                   </div>
                 </div>
 

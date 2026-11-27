@@ -34,7 +34,7 @@ export const ContactView: React.FC<ContactViewProps> = ({
       inquiryType === 'repuesto'
         ? 'Disponibilidad de repuesto'
         : inquiryType === 'mayorista'
-        ? 'Precios al por mayor (≥6 unds)'
+        ? 'Cotización de precios al por mayor'
         : inquiryType === 'sistecredito'
         ? 'Crédito Sistecrédito'
         : 'Consulta general'
@@ -245,7 +245,7 @@ ${message}`;
                     className="w-full h-11 px-3.5 rounded-xl bg-white border border-surface-container text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer"
                   >
                     <option value="repuesto">Consultar disponibilidad de repuesto</option>
-                    <option value="mayorista">Cotización mayorista (≥ 6 unidades)</option>
+                    <option value="mayorista">Cotización mayorista</option>
                     <option value="sistecredito">Información de crédito Sistecrédito</option>
                     <option value="despacho">Despacho intermunicipal en el Cesar</option>
                     <option value="otro">Otra consulta</option>

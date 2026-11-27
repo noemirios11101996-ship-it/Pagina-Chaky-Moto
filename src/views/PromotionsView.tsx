@@ -257,7 +257,7 @@ export const PromotionsView: React.FC<PromotionsViewProps> = ({
             Política de Precios Transparentes Chaky Motos
           </h3>
           <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-            No creemos en falsos descuentos del 70% ni ofertas con letra chica. En nuestras sedes de La Jagua de Ibirico, La Loma y Chiriguaná recibes precios justos de mostrador desde el primer repuesto, y descuentos al por mayor a partir de 6 unidades por referencia.
+            En nuestras sedes de La Jagua de Ibirico, La Loma y Chiriguaná puedes consultar precios al detal y solicitar por WhatsApp una cotización mayorista para las referencias y cantidades que necesitas.
           </p>
         </div>
       </section>

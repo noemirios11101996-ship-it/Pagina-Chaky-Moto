@@ -95,7 +95,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
                 <div className="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1">
                   <span className="material-symbols-outlined text-primary text-[22px]">inventory_2</span>
                   <span className="font-headline-sm text-xs sm:text-sm font-bold text-on-surface">Mayor & Detal</span>
-                  <span className="text-[10px] text-outline">Desde 6 unds por ref</span>
+                  <span className="text-[10px] text-outline">Cotización por WhatsApp</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1">
                   <span className="material-symbols-outlined text-emerald-600 text-[22px]">credit_score</span>
@@ -173,7 +173,7 @@ export const AboutView: React.FC<AboutViewProps> = ({
                 </div>
                 <h3 className="font-headline-sm text-xs sm:text-sm font-bold text-primary">Alianza con Talleres</h3>
                 <p className="text-[11px] text-on-surface-variant leading-relaxed">
-                  Apoyamos a mecánicos independientes y talleres con tarifas mayoristas desde 6 unidades.
+                  Atendemos pedidos mayoristas y confirmamos el precio por WhatsApp según las referencias y cantidades solicitadas.
                 </p>
               </div>
 

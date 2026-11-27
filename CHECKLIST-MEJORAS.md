@@ -15,7 +15,7 @@ Esta lista mantiene el trabajo pendiente visible y permite continuar desde la ca
 
 - [x] **Arranque local:** confirmado desde `C:\Users\noemi.e\Documents\Pagina Chaky` con `npm run dev`; Vite sirve en `http://localhost:3000/` y respondió HTTP 200 el 2026-11-27. Si CMD abre en otra carpeta, primero ejecutar `cd /d "C:\Users\noemi.e\Documents\Pagina Chaky"`. Las dependencias y `package-lock.json` ya existen; no ejecutar `npm i` fuera de la carpeta del proyecto.
 - [ ] **Previsualización y contactos:** abrir la página en el navegador; verificar las tres sedes, sus direcciones, horarios y botones de WhatsApp.
-- [ ] **Regla mayorista:** reemplazar o confirmar el cálculo automático actual desde seis unidades. La usuaria indicó que la venta mayorista no se determina por valor ni cantidad; falta definir si se cotiza por WhatsApp o existe una tarifa mayorista fija por producto.
+- [x] **Regla mayorista:** la usuaria confirmó que los precios mayoristas se cotizan por WhatsApp. Se quitó el cálculo automático por cantidad y se actualizaron catálogo, detalle, lista de pedido, inicio y canal mayorista.
 - [ ] **Catálogo y marcas:** recibir y revisar catálogo, marcas y productos autorizados. `Docs/` está vacía; no presentar datos de muestra como información empresarial confirmada.
 - [ ] **Domicilio local:** definir el valor mínimo de compra para ofrecer domicilio dentro del municipio, o mantener el mensaje de consultar según la compra.
 - [ ] **Identidad visual:** incorporar logo y fotografías propias aprobadas, cuando estén disponibles.

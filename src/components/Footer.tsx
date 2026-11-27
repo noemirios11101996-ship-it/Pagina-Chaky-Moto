@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenSedeModal }) =
             </p>
             <div className="pt-2">
               <span className="inline-block px-3 py-1 rounded-md bg-secondary text-white font-label-sm text-[11px] font-bold">
-                Mayoristas desde 6 unds por referencia
+                Cotiza pedidos mayoristas por WhatsApp
               </span>
             </div>
           </div>

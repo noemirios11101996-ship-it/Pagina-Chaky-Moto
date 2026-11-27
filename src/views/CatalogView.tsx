@@ -285,11 +285,6 @@ export const CatalogView: React.FC<CatalogViewProps> = ({
                         </span>
 
                         <div className="absolute top-2.5 right-2.5 flex flex-col items-end gap-1">
-                          {product.priceMayor < product.priceDetal && (
-                            <span className="px-2 py-0.5 rounded-full bg-secondary text-white text-[10px] font-bold shadow-xs">
-                              Mayorista ≥ 6
-                            </span>
-                          )}
                           <span
                             className={`px-2 py-0.5 rounded-full text-[10px] font-bold shadow-xs ${
                               availableInCurrentSede
@@ -341,12 +336,6 @@ export const CatalogView: React.FC<CatalogViewProps> = ({
                               ${product.priceDetal.toLocaleString('es-CO')}
                             </span>
                           </div>
-                          {product.priceMayor < product.priceDetal && (
-                            <div className="flex items-center justify-between text-[11px] border-t border-surface-container pt-1 text-secondary font-semibold">
-                              <span>Mayorista (≥6 und):</span>
-                              <span>${product.priceMayor.toLocaleString('es-CO')}</span>
-                            </div>
-                          )}
                         </div>
 
                         {/* Sede Stock Pills */}
