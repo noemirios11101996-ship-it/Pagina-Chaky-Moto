@@ -60,3 +60,7 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - Instaladas y verificadas las cinco skills previstas en `.agents/skills/`; no se ejecutaron sus scripts.
 - Completado el inventario inicial: sitio existente y `Docs/` vacía. El plan original quedó marcado para los pasos 0 y 1.
 - Confirmados en la web direcciones, WhatsApp compartido y horario; la comprobación de botones queda pendiente de una ejecución local fiable.
+
+## [2026-11-27] previsualización | Intento de reinicio
+- El puerto 3000 estaba libre. Se intentó iniciar Vite desde la copia local de trabajo, primero normal y luego con `DISABLE_HMR=true`; el proceso no abrió el puerto y no dejó un mensaje de error útil.
+- No se afirma que la web esté disponible. Sigue pendiente diagnosticar el arranque y luego verificar la respuesta HTTP y los botones de las tres sedes.
