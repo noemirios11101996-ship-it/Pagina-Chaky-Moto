@@ -64,3 +64,8 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 ## [2026-11-27] previsualización | Intento de reinicio
 - El puerto 3000 estaba libre. Se intentó iniciar Vite desde la copia local de trabajo, primero normal y luego con `DISABLE_HMR=true`; el proceso no abrió el puerto y no dejó un mensaje de error útil.
 - No se afirma que la web esté disponible. Sigue pendiente diagnosticar el arranque y luego verificar la respuesta HTTP y los botones de las tres sedes.
+
+## [2026-11-27] carpeta local | Previsualización y Git
+- La copia `C:\Users\noemi.e\Documents\Pagina Chaky` quedó conectada a `origin/main`; no se sobrescribió el árbol de trabajo. `Plan de mejora/` y `compartida/` se dejaron sin versionar.
+- `npm run dev` inició Vite en el puerto 3000 desde esta carpeta y `http://localhost:3000/` respondió HTTP 200.
+- Añadida `CHECKLIST-MEJORAS.md` a la raíz y publicada en GitHub. Sigue pendiente revisar visualmente la página y los tres botones de WhatsApp.
