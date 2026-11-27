@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SEDES_DATA, WHOLESALE_BENEFITS, FAQ_LIST } from '../data/mockData';
+import { SEDES_DATA, WHOLESALE_BENEFITS, FAQ_LIST, WHOLESALE_WHATSAPP_LINES } from '../data/mockData';
 
 interface WholesaleViewProps {
   onNavigate: (view: string) => void;
@@ -21,9 +21,11 @@ export const WholesaleView: React.FC<WholesaleViewProps> = ({
 
   const activeSede = SEDES_DATA[selectedSede] || SEDES_DATA['jagua'];
 
-  const handleWholesaleQuoteSubmit = (e: React.FormEvent) => {
+  const handleWholesaleQuoteSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const targetSede = SEDES_DATA[chosenSede];
+    const submitter = (e.nativeEvent as SubmitEvent).submitter as HTMLButtonElement | null;
+    const whatsappNumber = submitter?.value || WHOLESALE_WHATSAPP_LINES[0].number;
     const message = `*SOLICITUD COTIZACIÓN MAYORISTA CHAKY MOTOS*
 *Taller/Almacén:* ${workshopName || 'No especificado'}
 *Responsable:* ${contactName}
@@ -36,7 +38,7 @@ ${requestedReferences}
 
 Solicito cotización mayorista, confirmación de disponibilidad y condiciones de entrega. No asumir un precio hasta que el equipo confirme la cotización.`;
 
-    window.open(`https://wa.me/${targetSede.whatsapp}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -378,13 +380,17 @@ Solicito cotización mayorista, confirmación de disponibilidad y condiciones de
                 />
               </div>
 
-              <button
-                type="submit"
-                className="w-full py-4 px-6 rounded-2xl bg-secondary hover:bg-secondary-container text-white font-label-lg text-sm font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span className="material-symbols-outlined text-[22px]">chat</span>
-                <span>Enviar Solicitud Mayorista por WhatsApp</span>
-              </button>
+              {WHOLESALE_WHATSAPP_LINES.map((line, index) => (
+                <button
+                  key={line.number}
+                  type="submit"
+                  value={line.number}
+                  className={`w-full py-4 px-6 rounded-2xl ${index === 0 ? 'bg-secondary hover:bg-secondary-container' : 'bg-primary hover:bg-primary-container'} text-white font-label-lg text-sm font-bold shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer`}
+                >
+                  <span className="material-symbols-outlined text-[22px]">chat</span>
+                  <span>Enviar a {line.label} · {line.display}</span>
+                </button>
+              ))}
 
               <p className="text-[11px] text-center text-outline">
                 El equipo te confirmará el precio, la disponibilidad y las condiciones de entrega.

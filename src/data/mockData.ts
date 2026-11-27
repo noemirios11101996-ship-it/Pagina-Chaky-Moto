@@ -92,6 +92,11 @@ export const SEDES_DATA: Record<string, SedeInfo> = {
   }
 };
 
+export const WHOLESALE_WHATSAPP_LINES = [
+  { label: 'Línea mayorista 1', number: '573122687726', display: '+57 312 268 7726' },
+  { label: 'Línea mayorista 2', number: '573105009513', display: '+57 310 500 9513' }
+] as const;
+
 export const CATEGORIES = [
   { id: 'todos', name: 'Todos los productos', icon: 'grid_view' },
   { id: 'arrastre', name: 'Kits de Arrastre & Cadenas', icon: 'settings' },

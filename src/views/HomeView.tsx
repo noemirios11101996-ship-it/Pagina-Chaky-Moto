@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CATEGORIES, PRODUCTS_DATA, Product, SEDES_DATA, FAQ_LIST, TESTIMONIALS_DATA } from '../data/mockData';
+import { CATEGORIES, PRODUCTS_DATA, Product, SEDES_DATA, FAQ_LIST, TESTIMONIALS_DATA, WHOLESALE_WHATSAPP_LINES } from '../data/mockData';
 
 interface HomeViewProps {
   onNavigate: (view: string, filter?: string) => void;
@@ -355,17 +355,20 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 >
                   Conocer Canal Mayoristas
                 </button>
-                <a
-                  href={`https://wa.me/${SEDES_DATA.jagua.whatsapp}?text=${encodeURIComponent(
-                    'Hola, deseo solicitar una cotización mayorista. Estas son las referencias y cantidades que necesito:'
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-label-lg font-semibold transition-all inline-flex items-center gap-2"
-                >
-                  <span className="material-symbols-outlined text-[20px]">chat</span>
-                  <span>Línea Mayorista WhatsApp</span>
-                </a>
+                {WHOLESALE_WHATSAPP_LINES.map((line) => (
+                  <a
+                    key={line.number}
+                    href={`https://wa.me/${line.number}?text=${encodeURIComponent(
+                      'Hola, deseo solicitar una cotización mayorista. Estas son las referencias y cantidades que necesito:'
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-label-lg font-semibold transition-all inline-flex items-center gap-2"
+                  >
+                    <span className="material-symbols-outlined text-[20px]">chat</span>
+                    <span>{line.label}</span>
+                  </a>
+                ))}
               </div>
             </div>
 

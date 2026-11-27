@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SEDES_DATA, SedeInfo, FAQ_LIST } from '../data/mockData';
+import { SEDES_DATA, SedeInfo, FAQ_LIST, WHOLESALE_WHATSAPP_LINES } from '../data/mockData';
 
 interface ContactViewProps {
   onNavigate: (view: string) => void;
@@ -19,6 +19,7 @@ export const ContactView: React.FC<ContactViewProps> = ({
   const [phone, setPhone] = useState('');
   const [motoModel, setMotoModel] = useState('');
   const [inquiryType, setInquiryType] = useState('repuesto');
+  const [wholesaleLineIndex, setWholesaleLineIndex] = useState(0);
   const [message, setMessage] = useState('');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -43,7 +44,10 @@ export const ContactView: React.FC<ContactViewProps> = ({
 *Mensaje:*
 ${message}`;
 
-    window.open(`https://wa.me/${activeSede.whatsapp}?text=${encodeURIComponent(formatted)}`, '_blank');
+    const whatsappNumber = inquiryType === 'mayorista'
+      ? WHOLESALE_WHATSAPP_LINES[wholesaleLineIndex].number
+      : activeSede.whatsapp;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formatted)}`, '_blank', 'noopener,noreferrer');
   };
 
   const toggleFaq = (idx: number) => {
@@ -252,6 +256,24 @@ ${message}`;
                   </select>
                 </div>
               </div>
+
+              {inquiryType === 'mayorista' && (
+                <div>
+                  <label htmlFor="wholesale-line" className="text-xs font-bold text-on-surface block mb-1">
+                    Línea mayorista:
+                  </label>
+                  <select
+                    id="wholesale-line"
+                    value={wholesaleLineIndex}
+                    onChange={(event) => setWholesaleLineIndex(Number(event.target.value))}
+                    className="w-full h-11 px-3 rounded-xl bg-white border border-surface-container text-xs focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    {WHOLESALE_WHATSAPP_LINES.map((line, index) => (
+                      <option key={line.number} value={index}>{line.label} · {line.display}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
 
               <div>
                 <label className="text-xs font-bold text-on-surface block mb-1">

@@ -74,3 +74,7 @@ fuentes: ["../AGENTS.md", "../package.json", "../src/"]
 - La usuaria confirmó que el precio mayorista debe cotizarse por WhatsApp.
 - Eliminados el umbral y los descuentos automáticos de seis unidades; se actualizó la solicitud mayorista, catálogo, detalle, lista de pedido y textos de inicio/contacto.
 - `npm run lint` pasó y `npm run build` generó `dist/`. La revisión visual y los clics de WhatsApp siguen pendientes.
+
+## [2026-11-27] mayorista | Nuevas líneas de contacto
+- La usuaria indicó dos números mayoristas para todas las sedes: +57 312 268 7726 y +57 310 500 9513. El WhatsApp general de cada sede permanece en 311 397 2905.
+- Se agregaron ambas líneas a inicio, formulario de mayoristas y formulario general cuando el tipo de consulta es mayorista. Pendiente validar los destinos en navegador.
